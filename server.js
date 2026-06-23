@@ -92,7 +92,7 @@ app.get('/weather', async (req, res) => {
       return `\/me$(newline)\/me ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C]`;
     });
 
-    res.send(` /me${name} 7-Day: `);
+    res.send(`​/me ${name} 7-Day: `);
   } catch (e) {
     res.send('Weather unavailable right now.');
   }
