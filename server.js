@@ -25,11 +25,55 @@ app.get('/weather', async (req, res) => {
     
     const days = dataF.daily;
 
-    const ICONS = {
-      0:'☀️', 1:'🌤️', 2:'⛅', 3:'☁️',
-      45:'🌫️', 51:'🌦️', 61:'🌧️', 71:'🌨️',
-      80:'🌦️', 95:'⛈️'
-    };
+       const ICONS = {
+         
+                // Clear sky
+                0: '😎☀️😎',  // Clear sky
+              
+                // Clouds
+                1: '☀️🏖️',  // Mainly clear
+                2: '⛅',  // Partly cloudy
+                3: '☁️',  // Overcast
+              
+                // Fog
+                45: '🌫️', // Fog
+                48: '🌫️', // Depositing rime fog
+              
+                // Drizzle
+                51: '🌦️', // Drizzle: Light intensity
+                53: '🌦️', // Drizzle: Moderate intensity
+                55: '🌦️', // Drizzle: Dense intensity
+                56: '🥶💦', // Freezing Drizzle: Light intensity
+                57: '🥶💦', // Freezing Drizzle: Dense intensity
+              
+                // Rain
+                61: '🌧️🌂', // Rain: Slight intensity
+                63: '🌧️🌂', // Rain: Moderate intensity
+                65: '🌧️🌂', // Rain: Heavy intensity
+                66: '🥶☔', // Freezing Rain: Light intensity
+                67: '🥶☔', // Freezing Rain: Heavy intensity
+              
+                // Snow
+                71: '🌨️', // Snow fall: Slight intensity
+                73: '🌨️', // Snow fall: Moderate intensity
+                75: '🌨️', // Snow fall: Heavy intensity
+                77: '❄️', // Snow grains
+              
+                // Rain Showers
+                80: '🌦️', // Rain showers: Slight intensity
+                81: '🌦️', // Rain showers: Moderate intensity
+                82: '🌧️', // Rain showers: Violent intensity
+              
+                // Snow Showers
+                85: '🌨️❄️', // Snow showers: Slight intensity
+                86: '🌨️❄️', // Snow showers: Heavy intensity
+              
+                // Thunderstorms
+                95: '⛈️☂️', // Thunderstorm: Slight or moderate
+                96: '⛈️☂️', // Thunderstorm with slight hail
+                99: '⛈️☂️'  // Thunderstorm with heavy hail  
+    
+            };
 
     const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
