@@ -79,6 +79,7 @@ app.get('/weather', async (req, res) => {
     const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
     let parts = days.time.map((dateStr, i) => {
+      
       const d = new Date(dateStr + 'T12:00:00');
       const day = dayNames[d.getDay()];
       
@@ -88,9 +89,10 @@ app.get('/weather', async (req, res) => {
       const loC = Math.round(dataC.daily.temperature_2m_min[i]);
       
       const rain = days.precipitation_probability_max[i];
+      const uv = Math.round(days.uv_index_max[i]); 
       const code = days.weathercode[i];
       const icon = ICONS[code] || ICONS[Math.floor(code/10)*10] || '🌡️';
-      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C]`;
+      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C] ☀️UV: ${uv}`;
     });
 
     res.send(`${name} 7-Day: ` + parts.join(' '));
