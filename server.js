@@ -17,7 +17,7 @@ app.get('/weather', async (req, res) => {
 
     //  const urlF = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode&temperature_unit=fahrenheit&forecast_days=7&timezone=auto`;
     const urlF = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode,uv_index_max&temperature_unit=fahrenheit&forecast_days=7&timezone=auto`;
-    const urlC = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode&temperature_unit=fahrenheit&forecast_days=7&timezone=auto`;
+    const urlC = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode,uv_index_max&temperature_unit=fahrenheit&forecast_days=7&timezone=auto`;
 
     const [dataF, dataC] = await Promise.all([
       fetch(urlF).then(r => r.json()),
