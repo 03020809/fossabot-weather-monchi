@@ -77,17 +77,17 @@ app.get('/weather', async (req, res) => {
             };
 
     const EMOTES = {
-                1: "UV01",
-                2:  "UV02",
-                3:  "UV03",
-                4:  "UV04", 
-                5:  "UV05", 
-                6:  "UV06", 
-                7:  "UV07", 
-                8:  "UV08", 
-                9:  "UV09", 
-                10:  "UV10", 
-                11:  "UV11"
+                1: "UV01 EZ UV01 No protection needed",
+                2:  "UV02 EZ UV02 No protection needed",
+                3:  "UV03 Yikes UV03 Some protection is required",
+                4:  "UV04 Yikes UV04 Some protection is required", 
+                5:  "UV05 Yikes UV05 Some protection is required", 
+                6:  "UV06 NAILSING UV06 Protection essential", 
+                7:  "UV07 NAILSING UV07 Protection essential", 
+                8:  "UV08 REE UV08 Extra protection is needed", 
+                9:  "UV09 REE UV09 Extra protection is needed", 
+                10:  "UV10 REE UV10 Extra protection is needed", 
+                11:  "UV11 patrickrage UV11 Stay inside!"
           };
       
 
@@ -108,7 +108,7 @@ app.get('/weather', async (req, res) => {
       const emote = EMOTES[uv];
       const code = days.weathercode[i];
       const icon = ICONS[code] || ICONS[Math.floor(code/10)*10] || '🌡️';
-      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C] 🌞 UV: ${emote}`;
+      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C] 🌞 UV-Index: ${emote}`;
     });
 
     res.send(`${name} 7-Day: ` + parts.join(' '));
