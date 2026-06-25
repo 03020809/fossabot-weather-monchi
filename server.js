@@ -76,6 +76,21 @@ app.get('/weather', async (req, res) => {
     
             };
 
+    const EMOTES = {
+                1: "UV01",
+                2:  "UV02",
+                3:  "UV03",
+                4:  "UV04", 
+                5:  "UV05", 
+                6:  "UV06", 
+                7:  "UV07", 
+                8:  "UV08", 
+                9:  "UV09", 
+                10:  "UV10", 
+                11:  "UV11"
+          };
+      
+
     const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
     let parts = days.time.map((dateStr, i) => {
@@ -90,9 +105,10 @@ app.get('/weather', async (req, res) => {
       
       const rain = days.precipitation_probability_max[i];
       const uv = Math.round(days.uv_index_max[i]); 
+      const emote = EMOTES[uv];
       const code = days.weathercode[i];
       const icon = ICONS[code] || ICONS[Math.floor(code/10)*10] || '🌡️';
-      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C] ☀️UV: ${uv}`;
+      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C] ☀️UV: ${emote}`;
     });
 
     res.send(`${name} 7-Day: ` + parts.join(' '));
