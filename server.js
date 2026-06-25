@@ -77,17 +77,17 @@ app.get('/weather', async (req, res) => {
             };
 
     const EMOTES = {
-                1: "UV01 EZ UV01 No protection needed",
-                2:  "UV02 EZ UV02 No protection needed",
-                3:  "UV03 Yikes UV03 Some protection is required",
-                4:  "UV04 Yikes UV04 Some protection is required", 
-                5:  "UV05 Yikes UV05 Some protection is required", 
-                6:  "UV06 NAILSING UV06 Protection essential", 
-                7:  "UV07 NAILSING UV07 Protection essential", 
-                8:  "UV08 REEE UV08 Extra protection is needed", 
-                9:  "UV09 REEE UV09 Extra protection is needed", 
-                10:  "UV10 REEE UV10 Extra protection is needed", 
-                11:  "UV11 patrickrage UV11 Stay inside!"
+                1: "UV01 EZ UV01 • No protection needed",
+                2:  "UV02 EZ UV02 • No protection needed",
+                3:  "UV03 Yikes UV03 • Some protection is required",
+                4:  "UV04 Yikes UV04 • Some protection is required", 
+                5:  "UV05 Yikes UV05 • Some protection is required", 
+                6:  "UV06 NAILSING UV06 • Protection is essential", 
+                7:  "UV07 NAILSING UV07 • Protection is essential", 
+                8:  "UV08 REEE UV08 • Extra protection is needed", 
+                9:  "UV09 REEE UV09 • Extra protection is needed", 
+                10:  "UV10 REEE UV10 • Extra protection is needed", 
+                11:  "UV11 patrickrage UV11 • Stay fucking inside!"
           };
       
 
