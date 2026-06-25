@@ -108,7 +108,7 @@ app.get('/weather', async (req, res) => {
       const emote = EMOTES[uv];
       const code = days.weathercode[i];
       const icon = ICONS[code] || ICONS[Math.floor(code/10)*10] || '🌡️';
-      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C] ☀️: ${emote}`;
+      return `$(newline) ${day}: ${icon} [${hiF}°/${loF}°F] - [Rain: ${rain}%] 🌡️ [${hiC}°/${loC}°C] UV: ${emote}`;
     });
 
     res.send(`${name} 7-Day: ` + parts.join(' '));
