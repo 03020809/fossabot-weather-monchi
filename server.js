@@ -84,9 +84,9 @@ app.get('/weather', async (req, res) => {
                 5:  "UV05 Yikes UV05 Some protection is required", 
                 6:  "UV06 NAILSING UV06 Protection essential", 
                 7:  "UV07 NAILSING UV07 Protection essential", 
-                8:  "UV08 REE UV08 Extra protection is needed", 
-                9:  "UV09 REE UV09 Extra protection is needed", 
-                10:  "UV10 REE UV10 Extra protection is needed", 
+                8:  "UV08 REEE UV08 Extra protection is needed", 
+                9:  "UV09 REEE UV09 Extra protection is needed", 
+                10:  "UV10 REEE UV10 Extra protection is needed", 
                 11:  "UV11 patrickrage UV11 Stay inside!"
           };
       
