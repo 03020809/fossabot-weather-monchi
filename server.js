@@ -77,17 +77,17 @@ app.get('/weather', async (req, res) => {
             };
 
      const EMOTES = {
-                1: "UV01 UV01 UV01 • No protection needed EZ ",
-                2:  "UV02 UV02 UV02 • No protection needed EZ ",
-                3:  "UV03 UV03 UV03 • Some protection is required Yikes ",
-                4:  "UV04 UV04 UV04 • Some protection is required Yikes ", 
-                5:  "UV05 UV05 UV05 • Some protection is required Yikes ", 
-                6:  "UV06 UV06 UV06 • Protection is essential NAILSING ", 
-                7:  "UV07 UV07 UV07 • Protection is essential NAILSING ", 
-                8:  "UV08 UV08 UV08 • Extra protection is needed REEE ", 
-                9:  "UV09 UV09 UV09 • Extra protection is needed REEE ", 
-                10:  "UV08 UV08 UV08 • Extra protection is needed REEE ", 
-                11:  "UV11 UV11 UV11 • Stay fucking inside! patrickrage "
+                1: "UV01 UV01 UV01 • No protection needed • EZ ",
+                2:  "UV02 UV02 UV02 • No protection needed • EZ ",
+                3:  "UV03 UV03 UV03 • Some protection is required • Yikes ",
+                4:  "UV04 UV04 UV04 • Some protection is required • Yikes ", 
+                5:  "UV05 UV05 UV05 • Some protection is required • Yikes ", 
+                6:  "UV06 UV06 UV06 • Protection is essential • NAILSING ", 
+                7:  "UV07 UV07 UV07 • Protection is essential • NAILSING ", 
+                8:  "UV08 UV08 UV08 • Extra protection is needed • REEE ", 
+                9:  "UV09 UV09 UV09 • Extra protection is needed • REEE ", 
+                10:  "UV08 UV08 UV08 • Extra protection is needed • REEE ", 
+                11:  "UV11 UV11 UV11 • Stay fucking inside! • patrickrage "
           };
       
 
@@ -108,7 +108,7 @@ app.get('/weather', async (req, res) => {
       const emote = EMOTES[uv];
       const code = days.weathercode[i];
       const icon = ICONS[code] || ICONS[Math.floor(code/10)*10] || '🌡️';
-      return `$(newline) • ${day}: ${icon}  • [${hiF}°/${loF}°F]  • Rain: ${rain}%  •  🌡️  •  [${hiC}°/${loC}°C]  •  🌞 • UV-Index: • ${emote} •`;
+      return `$(newline) • ${day}: • ${icon} • [${hiF}°/${loF}°F] • Rain: ${rain}% • [${hiC}°/${loC}°C] • 🌞 • UV-Index: • ${emote} •`;
     });
 
     res.send(`${name} 7-Day: ` + parts.join(' '));
